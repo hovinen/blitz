@@ -7,6 +7,7 @@ mod accessibility_label;
 mod accessibility_placeholder;
 mod accessibility_presentational;
 mod accessibility_roles;
+mod accessibility_selected;
 mod accessibility_tree;
 mod animations;
 mod anonymous_block_cache_invalidation;

@@ -72,6 +72,8 @@ impl Node {
                 && let Ok(aria_selected) = aria_selected.parse()
             {
                 accesskit_node.set_selected(aria_selected);
+            } else if matches!(role, Role::ListBoxOption) {
+                accesskit_node.set_selected(element_data.attr(local_name!("selected")).is_some());
             }
 
             if self.supports_placeholder(element_data)
